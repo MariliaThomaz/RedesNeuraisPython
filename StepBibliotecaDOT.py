@@ -1,15 +1,12 @@
 
-entrada = [-1,7,5]
-pesos = [0.8, 0.1, 0]
+import numpy as np  #importando uma biblioteca
+
+entrada =np.array([1,7,5])
+pesos = np.array([0.8, 0.1, 0])
 
 def soma (e,p):
-    s =0
-    for i  in range(3):
-       # print(f'entarda: {entrada[i]}')
-      #print(f'peso : {pesos[i]}')
-
-        s += e[i] * p[i]#Calculo neural
-    return s
+    return e.dot(p) #dot product / produto escalar 
+#este 'dot' el faz soma e multiplicação
 
     
 s = soma(entrada, pesos)
