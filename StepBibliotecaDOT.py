@@ -1,5 +1,14 @@
 
 import numpy as np  #importando uma biblioteca
+import scipy
+print(scipy.__version__)
+from scipy import linalg
+
+try:
+    linalg.expm2
+    print("A função 'expm2' está disponível.")
+except AttributeError:
+    print("A função 'expm2' não está disponível nesta versão do SciPy.")
 
 entrada =np.array([1,7,5])
 pesos = np.array([0.8, 0.1, 0])
